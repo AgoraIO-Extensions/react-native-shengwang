@@ -18,7 +18,7 @@ import {
   UserOfflineReasonType,
   VideoCanvas,
   VideoSourceType,
-} from 'react-native-agora';
+} from 'react-native-shenwang';
 
 import { LogSink } from './LogSink';
 import {

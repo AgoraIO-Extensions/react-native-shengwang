@@ -11,7 +11,7 @@ import {
   UserOfflineReasonType,
   VideoCanvas,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shenwang';
 
 import {
   BaseComponent,

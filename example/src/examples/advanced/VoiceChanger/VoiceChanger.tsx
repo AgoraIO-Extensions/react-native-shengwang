@@ -9,7 +9,7 @@ import {
   VoiceBeautifierPreset,
   VoiceConversionPreset,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shenwang';
 
 import {
   BaseAudioComponentState,

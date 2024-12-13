@@ -7,7 +7,7 @@ import {
   IRtcEngineEventHandler,
   RtcConnection,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shenwang';
 import RNFS from 'react-native-fs';
 
 import {

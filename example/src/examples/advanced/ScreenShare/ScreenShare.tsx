@@ -17,7 +17,7 @@ import {
   VideoSourceType,
   createAgoraRtcEngine,
   showRPSystemBroadcastPickerView,
-} from 'react-native-agora';
+} from 'react-native-shenwang';
 
 import {
   BaseComponent,
