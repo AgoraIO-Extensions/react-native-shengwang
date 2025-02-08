@@ -2,7 +2,7 @@ import {
   AudioEffectPreset,
   AudioReverbType,
   VoiceBeautifierPreset,
-} from 'react-native-agora';
+} from 'react-native-shenwang';
 
 export const VoiceBeautifierPresetParam1Limit: Map<
   VoiceBeautifierPreset,

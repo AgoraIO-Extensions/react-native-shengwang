@@ -8,7 +8,7 @@ import {
   RtcConnection,
   RtcStats,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shenwang';
 
 import {
   BaseAudioComponentState,

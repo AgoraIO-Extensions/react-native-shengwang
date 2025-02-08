@@ -5,7 +5,7 @@ import {
   IRtcEngineEventHandler,
   LighteningContrastLevel,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shenwang';
 
 import {
   BaseComponent,

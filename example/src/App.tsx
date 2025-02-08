@@ -19,7 +19,7 @@ import {
   createAgoraRtcEngine,
   isDebuggable,
   setDebuggable,
-} from 'react-native-agora';
+} from 'react-native-shenwang';
 
 import Advanced from './examples/advanced';
 import Basic from './examples/basic';

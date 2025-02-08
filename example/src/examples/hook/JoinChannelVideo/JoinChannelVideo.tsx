@@ -9,7 +9,7 @@ import {
   VideoCanvas,
   VideoSourceType,
   VideoViewSetupMode,
-} from 'react-native-agora';
+} from 'react-native-shenwang';
 
 import {
   AgoraButton,

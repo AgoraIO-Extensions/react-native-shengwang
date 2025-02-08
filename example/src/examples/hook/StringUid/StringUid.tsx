@@ -1,5 +1,5 @@
 import React, { ReactElement, useCallback, useEffect, useState } from 'react';
-import { ClientRoleType } from 'react-native-agora';
+import { ClientRoleType } from 'react-native-shenwang';
 
 import { AgoraButton, AgoraTextInput } from '../../../components/ui';
 import * as log from '../../../utils/log';
