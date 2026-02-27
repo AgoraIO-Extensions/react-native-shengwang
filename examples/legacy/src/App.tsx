@@ -18,7 +18,7 @@ import {
   createAgoraRtcEngine,
   isDebuggable,
   setDebuggable,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { PipStateConsumer, PipStateProvider } from './context/pip';
