@@ -7759,9 +7759,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-auto-import@patch:eslint-plugin-auto-import@npm%3A0.1.1#./.yarn/patches/eslint-plugin-auto-import-npm-0.1.1-79fd8c84dd.patch::locator=react-native-agora%40workspace%3A.":
+"eslint-plugin-auto-import@patch:eslint-plugin-auto-import@npm%3A0.1.1#./.yarn/patches/eslint-plugin-auto-import-npm-0.1.1-79fd8c84dd.patch::locator=react-native-shengwang%40workspace%3A.":
   version: 0.1.1
-  resolution: "eslint-plugin-auto-import@patch:eslint-plugin-auto-import@npm%3A0.1.1#./.yarn/patches/eslint-plugin-auto-import-npm-0.1.1-79fd8c84dd.patch::version=0.1.1&hash=fa858b&locator=react-native-agora%40workspace%3A."
+  resolution: "eslint-plugin-auto-import@patch:eslint-plugin-auto-import@npm%3A0.1.1#./.yarn/patches/eslint-plugin-auto-import-npm-0.1.1-79fd8c84dd.patch::version=0.1.1&hash=fa858b&locator=react-native-shengwang%40workspace%3A."
   dependencies:
     requireindex: ~1.1.0
     ts-morph: ^9.1.0
@@ -7993,9 +7993,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@patch:eslint@npm%3A8.56.0#./.yarn/patches/eslint-npm-8.56.0-6eec398a41.patch::locator=react-native-agora%40workspace%3A.":
+"eslint@patch:eslint@npm%3A8.56.0#./.yarn/patches/eslint-npm-8.56.0-6eec398a41.patch::locator=react-native-shengwang%40workspace%3A.":
   version: 8.56.0
-  resolution: "eslint@patch:eslint@npm%3A8.56.0#./.yarn/patches/eslint-npm-8.56.0-6eec398a41.patch::version=8.56.0&hash=7094ea&locator=react-native-agora%40workspace%3A."
+  resolution: "eslint@patch:eslint@npm%3A8.56.0#./.yarn/patches/eslint-npm-8.56.0-6eec398a41.patch::version=8.56.0&hash=7094ea&locator=react-native-shengwang%40workspace%3A."
   dependencies:
     "@eslint-community/eslint-utils": ^4.2.0
     "@eslint-community/regexpp": ^4.6.1
@@ -11576,9 +11576,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-bigint@patch:json-bigint@npm%3A1.0.0#./.yarn/patches/json-bigint-npm-1.0.0-8e35bcb143.patch::locator=react-native-agora%40workspace%3A.":
+"json-bigint@patch:json-bigint@npm%3A1.0.0#./.yarn/patches/json-bigint-npm-1.0.0-8e35bcb143.patch::locator=react-native-shengwang%40workspace%3A.":
   version: 1.0.0
-  resolution: "json-bigint@patch:json-bigint@npm%3A1.0.0#./.yarn/patches/json-bigint-npm-1.0.0-8e35bcb143.patch::version=1.0.0&hash=81d948&locator=react-native-agora%40workspace%3A."
+  resolution: "json-bigint@patch:json-bigint@npm%3A1.0.0#./.yarn/patches/json-bigint-npm-1.0.0-8e35bcb143.patch::version=1.0.0&hash=81d948&locator=react-native-shengwang%40workspace%3A."
   dependencies:
     bignumber.js: ^9.0.0
   checksum: 074bc1c1dc6f771a92b81ff19d4e9f289e2b2866390f98189078134cf67f442d7e61056b6c0ba1248e3152a4dd17be3835eddbbcfa5a4e7e1b629c57efa98805
@@ -14600,9 +14600,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-agora-example-expo@workspace:examples/expo":
+"react-native-shengwang-example-expo@workspace:examples/expo":
   version: 0.0.0-use.local
-  resolution: "react-native-agora-example-expo@workspace:examples/expo"
+  resolution: "react-native-shengwang-example-expo@workspace:examples/expo"
   dependencies:
     "@babel/core": ^7.25.2
     "@react-native-community/cli": 15.0.1
@@ -14640,9 +14640,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-agora-example-legacy@workspace:examples/legacy":
+"react-native-shengwang-example-legacy@workspace:examples/legacy":
   version: 0.0.0-use.local
-  resolution: "react-native-agora-example-legacy@workspace:examples/legacy"
+  resolution: "react-native-shengwang-example-legacy@workspace:examples/legacy"
   dependencies:
     "@babel/core": ^7.25.2
     "@babel/preset-env": ^7.25.3
@@ -14681,9 +14681,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-agora@workspace:.":
+"react-native-shengwang@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-native-agora@workspace:."
+  resolution: "react-native-shengwang@workspace:."
   dependencies:
     "@commitlint/config-conventional": ^17.0.2
     "@evilmartians/lefthook": ^1.5.0
@@ -14790,9 +14790,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-color-picker@patch:react-native-color-picker@npm%3A0.6.0#./.yarn/patches/react-native-color-picker-npm-0.6.0-aaefc9686a.patch::locator=react-native-agora%40workspace%3A.":
+"react-native-color-picker@patch:react-native-color-picker@npm%3A0.6.0#./.yarn/patches/react-native-color-picker-npm-0.6.0-aaefc9686a.patch::locator=react-native-shengwang%40workspace%3A.":
   version: 0.6.0
-  resolution: "react-native-color-picker@patch:react-native-color-picker@npm%3A0.6.0#./.yarn/patches/react-native-color-picker-npm-0.6.0-aaefc9686a.patch::version=0.6.0&hash=a9422a&locator=react-native-agora%40workspace%3A."
+  resolution: "react-native-color-picker@patch:react-native-color-picker@npm%3A0.6.0#./.yarn/patches/react-native-color-picker-npm-0.6.0-aaefc9686a.patch::version=0.6.0&hash=a9422a&locator=react-native-shengwang%40workspace%3A."
   dependencies:
     prop-types: ^15.5.10
     tinycolor2: ^1.4.1
@@ -17042,9 +17042,9 @@ react-native-image-tool@AgoraIO-Extensions/react-native-image-tools:
   languageName: node
   linkType: hard
 
-"ts-interface-builder@patch:ts-interface-builder@npm%3A0.3.3#./.yarn/patches/ts-interface-builder-npm-0.3.3-64253a8816.patch::locator=react-native-agora%40workspace%3A.":
+"ts-interface-builder@patch:ts-interface-builder@npm%3A0.3.3#./.yarn/patches/ts-interface-builder-npm-0.3.3-64253a8816.patch::locator=react-native-shengwang%40workspace%3A.":
   version: 0.3.3
-  resolution: "ts-interface-builder@patch:ts-interface-builder@npm%3A0.3.3#./.yarn/patches/ts-interface-builder-npm-0.3.3-64253a8816.patch::version=0.3.3&hash=8181c5&locator=react-native-agora%40workspace%3A."
+  resolution: "ts-interface-builder@patch:ts-interface-builder@npm%3A0.3.3#./.yarn/patches/ts-interface-builder-npm-0.3.3-64253a8816.patch::version=0.3.3&hash=8181c5&locator=react-native-shengwang%40workspace%3A."
   dependencies:
     commander: ^2.12.2
     fs-extra: ^4.0.3

@@ -3,7 +3,7 @@ import {
   BackgroundBlurDegree,
   BackgroundSourceType,
   ClientRoleType,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 import ColorPicker, { Panel1 } from 'reanimated-color-picker';
 
 import { BaseComponent } from '../../../../src/components/hook/BaseComponent';

@@ -19,7 +19,7 @@ import {
   UserOfflineReasonType,
   VideoCanvas,
   VideoSourceType,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import { PipStateConsumer } from '../context/pip';
 
