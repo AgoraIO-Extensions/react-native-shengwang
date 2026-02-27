@@ -1,5 +1,5 @@
 {
-  "name": "react-native-agora",
+  "name": "react-native-shengwang",
   "version": "4.6.2-rc.1",
   "description": "Agora RTC SDK For React Native",
   "main": "lib/commonjs/index",
@@ -30,8 +30,8 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-agora-example-expo",
-    "legacy": "yarn workspace react-native-agora-example-legacy",
+    "example": "yarn workspace react-native-shengwang-example-expo",
+    "legacy": "yarn workspace react-native-shengwang-example-legacy",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{cjs,js,ts,tsx}\"",
@@ -47,13 +47,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/AgoraIO-Extensions/react-native-agora",
+  "repository": "https://github.com/AgoraIO-Extensions/react-native-shengwang",
   "author": "HUI <luxuhui@agora.io> (https://github.com/LichKing-2234)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AgoraIO-Extensions/react-native-agora/issues"
+    "url": "https://github.com/AgoraIO-Extensions/react-native-shengwang/issues"
   },
-  "homepage": "https://github.com/AgoraIO-Extensions/react-native-agora#readme",
+  "homepage": "https://github.com/AgoraIO-Extensions/react-native-shengwang#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
