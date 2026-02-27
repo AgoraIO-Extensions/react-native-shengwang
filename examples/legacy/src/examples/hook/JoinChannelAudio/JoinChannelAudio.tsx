@@ -7,7 +7,7 @@ import {
   LocalAudioStreamState,
   MediaDeviceType,
   RtcConnection,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import {
   AgoraButton,

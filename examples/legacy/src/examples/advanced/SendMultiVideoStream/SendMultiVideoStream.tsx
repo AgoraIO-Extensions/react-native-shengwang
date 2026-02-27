@@ -19,7 +19,7 @@ import {
   VideoFrame,
   VideoSourceType,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import {
   BaseComponent,

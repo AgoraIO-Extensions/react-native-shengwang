@@ -13,7 +13,7 @@ import {
   VideoContentHint,
   VideoSourceType,
   showRPSystemBroadcastPickerView,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import {
   AgoraButton,
