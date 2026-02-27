@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { ColorPicker, fromHsv } from 'react-native-color-picker';
 import {
   BackgroundBlurDegree,
   BackgroundSourceType,
@@ -7,7 +8,6 @@ import {
   IRtcEngineEventHandler,
   createAgoraRtcEngine,
 } from 'react-native-shengwang';
-import { ColorPicker, fromHsv } from 'react-native-color-picker';
 
 import {
   BaseComponent,

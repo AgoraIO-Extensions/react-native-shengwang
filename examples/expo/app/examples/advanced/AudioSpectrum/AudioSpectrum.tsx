@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Dimensions } from 'react-native';
+import { LineChart } from 'react-native-chart-kit';
 import {
   AudioSpectrumData,
   ChannelProfileType,
@@ -9,7 +10,6 @@ import {
   UserAudioSpectrumInfo,
   createAgoraRtcEngine,
 } from 'react-native-shengwang';
-import { LineChart } from 'react-native-chart-kit';
 
 import {
   BaseAudioComponentState,

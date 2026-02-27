@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { ColorPicker, fromHsv } from 'react-native-color-picker';
 import {
   AudioCodecProfileType,
   AudioSampleRateType,
@@ -14,7 +15,6 @@ import {
   VideoCodecTypeForStream,
   createAgoraRtcEngine,
 } from 'react-native-shengwang';
-import { ColorPicker, fromHsv } from 'react-native-color-picker';
 
 import {
   BaseComponent,
