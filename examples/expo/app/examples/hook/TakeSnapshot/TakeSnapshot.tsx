@@ -10,7 +10,7 @@ import {
   ClientRoleType,
   ErrorCodeType,
   RtcConnection,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 import RNFS from 'react-native-fs';
 
 import { BaseComponent } from '../../../../src/components/hook/BaseComponent';
