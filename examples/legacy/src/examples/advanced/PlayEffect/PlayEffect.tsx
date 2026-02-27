@@ -4,7 +4,7 @@ import {
   ClientRoleType,
   IRtcEngineEventHandler,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import {
   BaseAudioComponentState,
