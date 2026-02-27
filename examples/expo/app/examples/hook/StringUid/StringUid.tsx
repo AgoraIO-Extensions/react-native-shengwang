@@ -1,5 +1,5 @@
 import React, { ReactElement, useCallback, useEffect, useState } from 'react';
-import { ClientRoleType } from 'react-native-agora';
+import { ClientRoleType } from 'react-native-shengwang';
 
 import { BaseComponent } from '../../../../src/components/hook/BaseComponent';
 import BaseRenderChannel from '../../../../src/components/hook/BaseRenderChannel';
