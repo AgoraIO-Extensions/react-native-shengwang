@@ -12,6 +12,7 @@ import {
   View,
 } from 'react-native';
 
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import {
   AgoraPipState,
   SDKBuildInfo,
@@ -19,7 +20,6 @@ import {
   isDebuggable,
   setDebuggable,
 } from 'react-native-shengwang';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { PipStateConsumer, PipStateProvider } from './context/pip';
 import Advanced from './examples/advanced';

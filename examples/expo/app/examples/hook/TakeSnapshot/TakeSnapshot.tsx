@@ -6,12 +6,12 @@ import React, {
   useState,
 } from 'react';
 import { Platform } from 'react-native';
+import RNFS from 'react-native-fs';
 import {
   ClientRoleType,
   ErrorCodeType,
   RtcConnection,
 } from 'react-native-shengwang';
-import RNFS from 'react-native-fs';
 
 import { BaseComponent } from '../../../../src/components/hook/BaseComponent';
 import BaseRenderChannel from '../../../../src/components/hook/BaseRenderChannel';

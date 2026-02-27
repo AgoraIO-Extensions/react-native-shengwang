@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Platform } from 'react-native';
+import ImageTools from 'react-native-image-tool';
 import {
   ChannelProfileType,
   ClientRoleType,
@@ -11,7 +12,6 @@ import {
   createAgoraRtcEngine,
 } from 'react-native-shengwang';
 // @ts-ignore
-import ImageTools from 'react-native-image-tool';
 
 import {
   BaseComponent,

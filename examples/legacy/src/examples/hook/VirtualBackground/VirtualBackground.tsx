@@ -1,10 +1,10 @@
 import React, { ReactElement, useState } from 'react';
+import { ColorPicker, fromHsv } from 'react-native-color-picker';
 import {
   BackgroundBlurDegree,
   BackgroundSourceType,
   ClientRoleType,
 } from 'react-native-shengwang';
-import { ColorPicker, fromHsv } from 'react-native-color-picker';
 
 import {
   AgoraButton,

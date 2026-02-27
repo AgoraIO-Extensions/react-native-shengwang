@@ -1,193 +1,193 @@
 import { RtcRendererViewProps } from './AgoraRtcRenderView';
 
 /**
- * Layout configuration for picture-in-picture video streams.
+ * 画中画视频流的布局配置。
  *
- * Since Available since v4.6.2. This class defines how multiple video streams are arranged in a flowing layout, from left to right and top to bottom.
+ * 自从 自 v4.6.2 版本新增。 该类定义多个视频流在流式布局中的排列方式，视频流从左到右、从上到下依次排列。
  */
 export class AgoraPipContentViewLayout {
   /**
-   * Padding around the entire layout in pixels. Used to create space between the layout edge and video streams. If null, no padding is applied.
+   * 整个布局周围的内边距，单位为像素。用于在布局边缘和视频流之间创建空间。如果为 null，则不应用内边距。
    */
   padding?: number;
 
   /**
-   * Horizontal and vertical spacing between video streams in pixels. Used to create consistent spacing between adjacent video streams. If null, video streams are placed directly adjacent.
+   * 视频流之间的水平和垂直间距，单位为像素。用于在相邻视频流之间创建一致的间距。如果为 null，视频流将直接相邻放置。
    */
   spacing?: number;
 
   /**
-   * Maximum number of rows allowed in the layout. Once the maximum is reached, no new rows are created even if more video streams exist. If null, rows are created as needed to accommodate all streams. Must be greater than 0 or null.
+   * 布局中允许的最大行数。达到最大行数后，即使存在更多视频流，也不会创建新行。如果为 null，将根据需要创建行以容纳所有视频流。必须大于 0 或为 null。
    */
   row?: number;
 
   /**
-   * Maximum number of video streams per row. Once the maximum is reached, a new row starts. If null, video streams flow to fill the available width. Must be greater than 0 or null.
+   * 每行的最大视频流数量。达到最大数量后，将开始新行。如果为 null，视频流将流动填充可用宽度。必须大于 0 或为 null。
    */
   column?: number;
 }
 
 /**
- * Configuration options for Agora picture-in-picture mode.
+ * 声网画中画模式的配置选项。
  *
- * Since Available since v4.6.2. This class provides platform-specific options to configure picture-in-picture behavior on Android and iOS.
+ * 自从 自 v4.6.2 版本新增。 该类提供平台特定的选项来配置 Android 和 iOS 平台的画中画行为。
  */
 export class AgoraPipOptions {
   /**
-   * Whether to automatically enter picture-in-picture mode.
+   * 是否自动进入画中画模式。
    */
   autoEnterEnabled?: boolean;
 
   /**
-   * Horizontal aspect ratio of the picture-in-picture window.
+   * 画中画窗口的水平宽高比。
    *
-   * (Android only)
+   * 仅适用于 Android 平台。
    */
   aspectRatioX?: number;
 
   /**
-   * Vertical aspect ratio of the picture-in-picture window.
+   * 画中画窗口的垂直宽高比。
    *
-   * (Android only)
+   * 仅适用于 Android 平台。
    */
   aspectRatioY?: number;
 
   /**
-   * Left coordinate of the source rectangle hint.
+   * 源矩形提示的左坐标。
    *
-   * Used to specify the initial position of the picture-in-picture window.
-   * (Android only)
+   * 用于指定画中画窗口的初始位置。
+   * 仅适用于 Android 平台。
    */
   sourceRectHintLeft?: number;
 
   /**
-   * Top coordinate of the source rectangle hint.
+   * 源矩形提示的上坐标。
    *
-   * Used to specify the initial position of the picture-in-picture window.
-   * (Android only)
+   * 用于指定画中画窗口的初始位置。
+   * 仅适用于 Android 平台。
    */
   sourceRectHintTop?: number;
 
   /**
-   * Right coordinate of the source rectangle hint.
+   * 源矩形提示的右坐标。
    *
-   * Used to specify the initial position of the picture-in-picture window.
-   * (Android only)
+   * 用于指定画中画窗口的初始位置。
+   * 仅适用于 Android 平台。
    */
   sourceRectHintRight?: number;
 
   /**
-   * Bottom coordinate of the source rectangle hint.
+   * 源矩形提示的下坐标。
    *
-   * Used to specify the initial position of the picture-in-picture window.
-   * (Android only)
+   * 用于指定画中画窗口的初始位置。
+   * 仅适用于 Android 平台。
    */
   sourceRectHintBottom?: number;
 
   /**
-   * Whether to enable seamless resizing of the picture-in-picture window.
+   * 是否启用画中画窗口的无缝调整大小。
    *
-   * When enabled, the window resizes smoothly.
-   * Default is false.
-   * (Android only)
+   * 启用后，画中画窗口将平滑调整大小。
+   * 默认为 false 。
+   * 仅适用于 Android 平台。
    */
   seamlessResizeEnabled?: boolean;
 
   /**
-   * Whether to use an external state monitor.
+   * 是否使用外部状态监控。
    *
-   * When enabled, a dedicated thread is created to monitor the state of the picture-in-picture window. Use externalStateMonitorInterval to configure the monitoring frequency.
-   * Default is true.
-   * (Android only)
+   * 启用后，创建专用线程来监控画中画窗口状态。使用 externalStateMonitorInterval 配置监控频率。
+   * 默认为 true 。
+   * 仅适用于 Android 平台。
    */
   useExternalStateMonitor?: boolean;
 
   /**
-   * Interval for external state monitoring, in milliseconds.
+   * 外部状态监控的间隔，单位为毫秒。
    *
-   * Takes effect only when useExternalStateMonitor is true.
-   * Default is 100ms.
-   * (Android only)
+   * 仅在 useExternalStateMonitor 为 true 时生效。
+   * 默认为 100ms。
+   * 仅适用于 Android 平台。
    */
   externalStateMonitorInterval?: number;
 
   /**
-   * Video transcoding configuration.
+   * 视频转码配置。
    *
-   * Takes effect only when contentView is set to 0. When the SDK manages the views, all video streams are placed in the root view of the picture-in-picture window.
-   * (iOS only)
+   * 仅在 contentView 设置为 0 时生效。当用户让 SDK 管理视图时，所有视频流将放置在画中画窗口的根视图中。
+   * 仅适用于 iOS 平台。
    */
   videoStreams?: RtcRendererViewProps[];
 
   /**
-   * Layout configuration for picture-in-picture video streams.
+   * 画中画视频流的布局配置。
    *
-   * Takes effect only when contentView is set to 0.
-   * (iOS only)
+   * 仅在 contentView 设置为 0 时生效。
+   * 仅适用于 iOS 平台。
    */
   contentViewLayout?: AgoraPipContentViewLayout;
 
   /**
-   * sourceContentView determines the source frame and restore target for picture-in-picture animation. Pass 0 to use the app's root view. For best animation experience, set this to the view containing video content. The system uses this view for enter/exit animations and as the restore target when returning to the app or stopping picture-in-picture.
+   * sourceContentView 确定画中画动画的源帧和恢复目标。传递 0 以使用应用的根视图。为了获得最佳动画效果，请将此设置为包含视频内容的视图。系统使用此视图进行画中画进入/退出动画，并在返回应用或停止画中画时作为恢复目标。
    */
   sourceContentView?: number;
 
   /**
-   * contentView determines which view will be displayed in the picture-in-picture window. If 0 is passed, the picture-in-picture controller automatically manages and displays all video streams. If a specific view ID is passed, you are responsible for managing the content displayed in the picture-in-picture window.
+   * contentView 确定将在画中画窗口中显示哪个视图。如果传递 0，画中画控制器将自动管理并显示所有视频流。如果传递特定的视图 ID，你需要负责管理画中画窗口中显示的内容。
    */
   contentView?: number;
 
   /**
-   * Preferred width of the picture-in-picture content.
+   * 画中画内容的首选宽度。
    *
-   * (iOS only)
+   * 仅适用于 iOS 平台。
    */
   preferredContentWidth?: number;
 
   /**
-   * Preferred height of the picture-in-picture content.
+   * 画中画内容的首选高度。
    *
-   * (iOS only)
+   * 仅适用于 iOS 平台。
    */
   preferredContentHeight?: number;
 
   /**
-   * Control style of the picture-in-picture window.
-   * Available styles:
-   *  0: Show all system controls (default)
-   *  1: Hide forward and back buttons
-   *  2: Hide play/pause button and progress bar (recommended)
-   *  3: Hide all system controls, including close and restore buttons (iOS only)
+   * 画中画窗口的控制样式。
+   * 可用样式：
+   *  0：显示所有系统控件（默认）
+   *  1：隐藏前进和后退按钮
+   *  2：隐藏播放/暂停按钮和进度条（推荐）
+   *  3：隐藏所有系统控件，包括关闭和恢复按钮 仅适用于 iOS 平台。
    */
   controlStyle?: number;
 }
 
 /**
- * Represents the current state of Picture-in-Picture mode.
+ * 表示画中画模式的当前状态。
  *
- * Since Available since v4.6.2.
+ * 自从 自 v4.6.2 版本新增。
  */
 export enum AgoraPipState {
   /**
-   * 0: Picture-in-Picture mode has started successfully.
+   * 0：画中画模式已成功启动。
    */
   pipStateStarted = 0,
 
   /**
-   * 1: Picture-in-Picture mode has stopped.
+   * 1：画中画模式已停止。
    */
   pipStateStopped = 1,
 
   /**
-   * 2: Failed to start Picture-in-Picture mode or encountered an error.
+   * 2：画中画模式启动失败或遇到错误。
    */
   pipStateFailed = 2,
 }
 
 /**
- * Observer for picture-in-picture state changes.
+ * 画中画状态改变的观测器。
  *
- * Since Available since v4.6.2. Implement this class to receive notifications of picture-in-picture state transitions and potential errors.
+ * 自从 自 v4.6.2 版本新增。 实现此类以接收画中画状态转换和潜在错误的通知。
  */
 export interface AgoraPipStateChangedObserver {
   /**
@@ -197,99 +197,99 @@ export interface AgoraPipStateChangedObserver {
 }
 
 /**
- * Controller interface for managing picture-in-picture functionality.
+ * 管理画中画功能的控制器接口。
  *
- * Since Available since v4.6.2. This abstract class defines methods required to control picture-in-picture mode, including setup, state management, and lifecycle operations.
+ * 自从 自 v4.6.2 版本新增。 此抽象类定义了控制画中画模式所需的方法，包括设置、状态管理和生命周期操作。
  */
 export abstract class AgoraPip {
   /**
-   * Releases resources related to picture-in-picture.
+   * 释放画中画相关的资源。
    *
-   * Since Available since v4.6.2.
+   * 自从 自 v4.6.2 版本新增。
    */
   abstract release(): void;
 
   /**
-   * Registers a picture-in-picture state change observer.
+   * 注册画中画状态改变观测器。
    *
-   * @param observer Picture-in-picture state change observer. See AgoraPipStateChangedObserver.
+   * @param observer 画中画状态改变观测器，详见 AgoraPipStateChangedObserver 。
    */
   abstract registerPipStateChangedObserver(
     observer: AgoraPipStateChangedObserver
   ): void;
 
   /**
-   * Unregisters the picture-in-picture state change observer.
+   * 取消注册画中画状态改变观测器。
    *
-   * @param observer The picture-in-picture state change observer. See AgoraPipStateChangedObserver.
+   * @param observer 画中画状态改变观测器，详见 AgoraPipStateChangedObserver 。
    */
   abstract unregisterPipStateChangedObserver(
     observer: AgoraPipStateChangedObserver
   ): void;
 
   /**
-   * Checks whether the current device supports picture-in-picture mode.
+   * 检查当前设备是否支持画中画模式。
    *
-   * Since Available since v4.6.2.
+   * 自从 自 v4.6.2 版本新增。
    *
    * @returns
-   * true : The current device supports picture-in-picture mode. false : The current device does not support picture-in-picture mode.
+   * true ：当前设备支持画中画模式。 false ：当前设备不支持画中画模式。
    */
   abstract pipIsSupported(): boolean;
 
   /**
-   * Checks whether auto-entering picture-in-picture mode is supported.
+   * 检查是否支持自动进入画中画模式。
    *
-   * Since Available since v4.6.2.
+   * 自从 自 v4.6.2 版本新增。
    *
    * @returns
-   * true : Auto-entering picture-in-picture mode is supported. false : Auto-entering picture-in-picture mode is not supported.
+   * true ：支持自动进入画中画模式。 false ：不支持自动进入画中画模式。
    */
   abstract pipIsAutoEnterSupported(): boolean;
 
   /**
-   * Checks whether picture-in-picture mode is activated.
+   * 检查画中画模式是否已激活。
    *
-   * Since Available since v4.6.2.
+   * 自从 自 v4.6.2 版本新增。
    *
    * @returns
-   * true : Picture-in-picture mode is activated. false : Picture-in-picture mode is not activated.
+   * true ：画中画模式已激活。 false ：画中画模式未激活。
    */
   abstract isPipActivated(): boolean;
 
   /**
-   * Configures picture-in-picture mode.
+   * 配置画中画模式。
    *
-   * Since Available since v4.6.2.
+   * 自从 自 v4.6.2 版本新增。
    *
-   * @param options Picture-in-picture configuration options. See AgoraPipOptions.
+   * @param options 画中画配置选项，详见 AgoraPipOptions 。
    *
    * @returns
-   * true : The method call succeeds. false : The method call fails.
+   * true ：方法调用成功。 false ：方法调用失败。
    */
   abstract pipSetup(options: AgoraPipOptions): boolean;
 
   /**
-   * Starts picture-in-picture mode.
+   * 启动画中画模式。
    *
-   * Since Available since v4.6.2.
+   * 自从 自 v4.6.2 版本新增。
    *
    * @returns
-   * true : The method call succeeds. false : The method call fails.
+   * true ：方法调用成功。 false ：方法调用失败。
    */
   abstract pipStart(): boolean;
 
   /**
-   * Stops picture-in-picture mode.
+   * 停止画中画模式。
    *
-   * Since Available since v4.6.2.
+   * 自从 自 v4.6.2 版本新增。
    */
   abstract pipStop(): void;
 
   /**
-   * Releases resources related to picture-in-picture.
+   * 释放画中画相关的资源。
    *
-   * Since Available since v4.6.2.
+   * 自从 自 v4.6.2 版本新增。
    */
   abstract pipDispose(): void;
 }
