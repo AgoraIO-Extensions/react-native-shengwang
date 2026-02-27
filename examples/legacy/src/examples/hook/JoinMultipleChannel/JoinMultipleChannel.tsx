@@ -6,7 +6,7 @@ import {
   RtcConnection,
   RtcStats,
   VideoCanvas,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import {
   AgoraButton,

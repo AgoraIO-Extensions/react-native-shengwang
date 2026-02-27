@@ -7,7 +7,7 @@ import {
   ContentInspectType,
   IRtcEngineEventHandler,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import {
   BaseComponent,

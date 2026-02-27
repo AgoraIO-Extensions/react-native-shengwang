@@ -3,7 +3,7 @@ import {
   BackgroundBlurDegree,
   BackgroundSourceType,
   ClientRoleType,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 import { ColorPicker, fromHsv } from 'react-native-color-picker';
 
 import {
