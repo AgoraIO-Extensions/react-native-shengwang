@@ -1,5 +1,5 @@
 import React from 'react';
-import { AgoraPipState } from 'react-native-agora';
+import { AgoraPipState } from 'react-native-shengwang';
 
 const PipContext = () => null;
 export default PipContext;

@@ -13,7 +13,7 @@ import {
   VideoCodecProfileType,
   VideoCodecTypeForStream,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 import ColorPicker, { Panel1 } from 'reanimated-color-picker';
 
 import {

@@ -7,7 +7,7 @@ import {
   LocalAudioStreamState,
   MediaDeviceType,
   RtcConnection,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import { BaseComponent } from '../../../../src/components/hook/BaseComponent';
 import BaseRenderChannel from '../../../../src/components/hook/BaseRenderChannel';
