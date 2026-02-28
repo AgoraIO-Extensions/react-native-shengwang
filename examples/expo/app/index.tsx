@@ -14,7 +14,7 @@ import {
   createAgoraRtcEngine,
   isDebuggable,
   setDebuggable,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import { PipStateConsumer } from '../src/context/pip';
 

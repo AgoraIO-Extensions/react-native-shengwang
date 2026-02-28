@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-native-agora": ["../../src/index"]
+      "react-native-shengwang": ["../../src/index"]
     }
   }
 }
