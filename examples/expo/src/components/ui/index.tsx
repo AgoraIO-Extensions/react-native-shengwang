@@ -35,7 +35,7 @@ import PickerSelect, {
 } from 'react-native-picker-select';
 import { useSharedValue } from 'react-native-reanimated';
 
-export { RtcSurfaceView } from 'react-native-agora';
+export { RtcSurfaceView } from 'react-native-shengwang';
 
 export const AgoraView = (props: ViewProps & { horizontal?: boolean }) => {
   const { horizontal, style, ...others } = props;

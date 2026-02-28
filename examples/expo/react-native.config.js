@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   dependencies: {
-    'react-native-agora': {
+    'react-native-shengwang': {
       root: path.resolve(__dirname, '../..'),
     },
   },

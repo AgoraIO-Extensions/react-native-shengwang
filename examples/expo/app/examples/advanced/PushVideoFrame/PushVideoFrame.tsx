@@ -9,7 +9,7 @@ import {
   VideoBufferType,
   VideoPixelFormat,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 // @ts-ignore
 import ImageTools from 'react-native-image-tool';
 
