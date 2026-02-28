@@ -7,43 +7,43 @@ import AgoraRtcSurfaceViewNativeComponent from './specs/AgoraRtcSurfaceViewNativ
 import AgoraRtcTextureViewNativeComponent from './specs/AgoraRtcTextureViewNativeComponent';
 
 /**
- * Common properties of RtcSurfaceView and RtcTextureView.
+ * RtcSurfaceView 和 RtcTextureView 的通用属性。
  */
 export interface RtcRendererViewProps extends ViewProps {
   /**
-   * Local video display properties. See VideoCanvas.
+   * 本地视频显示属性。详见 VideoCanvas 。
    */
   canvas: VideoCanvas;
 
   /**
-   * Connection information. See RtcConnection.
+   * Connection 信息。详见 RtcConnection 。
    */
   connection?: RtcConnection;
 }
 
 /**
- * Properties of RtcSurfaceView.
+ * RtcSurfaceView 的属性。
  */
 export interface RtcSurfaceViewProps extends RtcRendererViewProps {
   /**
-   * Whether to place the surface layer of the RtcSurfaceView above the window: true : Place above the window. false : Do not place above the window.
+   * 是否将 RtcSurfaceView 视图的表层置于窗口上层： true : 置于窗口上层。 false : 不置于窗口上层。
    */
   zOrderOnTop?: boolean;
 
   /**
-   * Whether to place the surface layer of the RtcSurfaceView above another RtcSurfaceView in the window (but still below the window): true : Place above another RtcSurfaceView in the window. false : Do not place above the window.
+   * 是否将 RtcSurfaceView 视图的表层置于窗口中另一个 RtcSurfaceView 的上层（但依然位于窗口的下层）： true : 置于窗口中另一个 RtcSurfaceView 的上层。 false : 不置于窗口上层。
    */
   zOrderMediaOverlay?: boolean;
 }
 
 /**
- * RtcSurfaceView class.
+ * RtcSurfaceView 类。
  *
- * This class is used for rendering:
- *  Android: Corresponds to the native SurfaceView of the Android system.
- *  iOS: Corresponds to the native UIView of the iOS system. To ensure rendering works, perform the following operations before calling this component depending on whether you have joined a channel:
- *  If not joined: Call startPreview first, then call enableVideo.
- *  If joined: Start capture first, then call enableVideo. Related references: RtcSurfaceViewProps RtcRendererViewProps
+ * 该类用于渲染：
+ *  Android: 对应 Android 系统原生的 SurfaceView。
+ *  iOS: 对应 iOS 系统原生的 UIView。 为保证渲染出图，调用该组件前，根据当前是否加入频道进行对应操作：
+ *  不加入频道时：先调用 startPreview ，然后调用 enableVideo 。
+ *  加入频道时：先开启采集，然后调用 enableVideo 。 相关参考： RtcSurfaceViewProps RtcRendererViewProps
  */
 export class RtcSurfaceView extends IAgoraRtcRenderView<RtcSurfaceViewProps> {
   /**
@@ -55,12 +55,12 @@ export class RtcSurfaceView extends IAgoraRtcRenderView<RtcSurfaceViewProps> {
 }
 
 /**
- * RtcTextureView class.
+ * RtcTextureView 类。
  *
- * This class is used for rendering. Corresponds to the native TextureView of the Android system.
- * To ensure rendering works, perform the following operations before calling this component depending on whether you have joined a channel:
- *  If not joined: Call startPreview first, then call enableVideo.
- *  If joined: Start capture first, then call enableVideo. Related reference: RtcRendererViewProps The RtcTextureView class is for Android only and not supported on iOS.
+ * 该类用于渲染。对应 Android 系统原生的 TextureView。
+ * 为保证渲染出图，调用该组件前，根据当前是否加入频道进行对应操作：
+ *  不加入频道时：先调用 startPreview ，然后调用 enableVideo 。
+ *  加入频道时：先开启采集，然后调用 enableVideo 。 相关参考： RtcRendererViewProps RtcTextureView 类仅适用于 Android 平台，不适用于 iOS 平台。
  */
 export class RtcTextureView extends IAgoraRtcRenderView<RtcRendererViewProps> {
   /**
