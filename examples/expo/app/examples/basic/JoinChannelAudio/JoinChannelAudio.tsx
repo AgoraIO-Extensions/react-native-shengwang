@@ -18,7 +18,7 @@ import {
   RtcStats,
   UserOfflineReasonType,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import {
   BaseAudioComponentState,

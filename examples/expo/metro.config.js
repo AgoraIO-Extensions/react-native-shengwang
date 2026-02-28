@@ -24,7 +24,7 @@ config.resolver.disableHierarchicalLookup = true;
 
 // 4. Extra modules to include
 config.resolver.extraNodeModules = {
-  'react-native-agora': path.resolve(workspaceRoot),
+  'react-native-shengwang': path.resolve(workspaceRoot),
 };
 
 module.exports = config;

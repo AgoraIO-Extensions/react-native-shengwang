@@ -8,7 +8,7 @@ import {
   IRtcEngineEventHandler,
   UserAudioSpectrumInfo,
   createAgoraRtcEngine,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 import { LineChart } from 'react-native-chart-kit';
 
 import {
