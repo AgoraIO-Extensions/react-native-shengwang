@@ -7759,9 +7759,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-auto-import@patch:eslint-plugin-auto-import@npm%3A0.1.1#./.yarn/patches/eslint-plugin-auto-import-npm-0.1.1-79fd8c84dd.patch::locator=react-native-agora%40workspace%3A.":
+"eslint-plugin-auto-import@patch:eslint-plugin-auto-import@npm%3A0.1.1#./.yarn/patches/eslint-plugin-auto-import-npm-0.1.1-79fd8c84dd.patch::locator=react-native-shengwang%40workspace%3A.":
   version: 0.1.1
-  resolution: "eslint-plugin-auto-import@patch:eslint-plugin-auto-import@npm%3A0.1.1#./.yarn/patches/eslint-plugin-auto-import-npm-0.1.1-79fd8c84dd.patch::version=0.1.1&hash=fa858b&locator=react-native-agora%40workspace%3A."
+  resolution: "eslint-plugin-auto-import@patch:eslint-plugin-auto-import@npm%3A0.1.1#./.yarn/patches/eslint-plugin-auto-import-npm-0.1.1-79fd8c84dd.patch::version=0.1.1&hash=fa858b&locator=react-native-shengwang%40workspace%3A."
   dependencies:
     requireindex: ~1.1.0
     ts-morph: ^9.1.0
@@ -7993,9 +7993,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@patch:eslint@npm%3A8.56.0#./.yarn/patches/eslint-npm-8.56.0-6eec398a41.patch::locator=react-native-agora%40workspace%3A.":
+"eslint@patch:eslint@npm%3A8.56.0#./.yarn/patches/eslint-npm-8.56.0-6eec398a41.patch::locator=react-native-shengwang%40workspace%3A.":
   version: 8.56.0
-  resolution: "eslint@patch:eslint@npm%3A8.56.0#./.yarn/patches/eslint-npm-8.56.0-6eec398a41.patch::version=8.56.0&hash=7094ea&locator=react-native-agora%40workspace%3A."
+  resolution: "eslint@patch:eslint@npm%3A8.56.0#./.yarn/patches/eslint-npm-8.56.0-6eec398a41.patch::version=8.56.0&hash=7094ea&locator=react-native-shengwang%40workspace%3A."
   dependencies:
     "@eslint-community/eslint-utils": ^4.2.0
     "@eslint-community/regexpp": ^4.6.1
@@ -11576,9 +11576,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-bigint@patch:json-bigint@npm%3A1.0.0#./.yarn/patches/json-bigint-npm-1.0.0-8e35bcb143.patch::locator=react-native-agora%40workspace%3A.":
+"json-bigint@patch:json-bigint@npm%3A1.0.0#./.yarn/patches/json-bigint-npm-1.0.0-8e35bcb143.patch::locator=react-native-shengwang%40workspace%3A.":
   version: 1.0.0
-  resolution: "json-bigint@patch:json-bigint@npm%3A1.0.0#./.yarn/patches/json-bigint-npm-1.0.0-8e35bcb143.patch::version=1.0.0&hash=81d948&locator=react-native-agora%40workspace%3A."
+  resolution: "json-bigint@patch:json-bigint@npm%3A1.0.0#./.yarn/patches/json-bigint-npm-1.0.0-8e35bcb143.patch::version=1.0.0&hash=81d948&locator=react-native-shengwang%40workspace%3A."
   dependencies:
     bignumber.js: ^9.0.0
   checksum: 074bc1c1dc6f771a92b81ff19d4e9f289e2b2866390f98189078134cf67f442d7e61056b6c0ba1248e3152a4dd17be3835eddbbcfa5a4e7e1b629c57efa98805
@@ -14681,45 +14681,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-agora@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "react-native-agora@workspace:."
-  dependencies:
-    "@commitlint/config-conventional": ^17.0.2
-    "@evilmartians/lefthook": ^1.5.0
-    "@react-native/eslint-config": ^0.77.1
-    "@release-it/conventional-changelog": ^5.0.0
-    "@types/jest": ^28.1.2
-    "@types/json-bigint": ^1.0.1
-    "@types/react": 18.3.1
-    buffer: ^6.0.3
-    commitlint: ^17.0.2
-    del-cli: ^5.0.0
-    eslint: ^8.4.1
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-auto-import: ^0.1.1
-    eslint-plugin-import: ^2.27.5
-    eslint-plugin-prettier: ^4.0.0
-    eventemitter3: ^5.0.1
-    jest: ^28.1.1
-    json-bigint: ^1.0.0
-    pod-install: ^0.2.0
-    prettier: 2.8.8
-    react: 18.3.1
-    react-native: 0.77.1
-    react-native-builder-bob: ^0.20.0
-    release-it: ^15.0.0
-    ts-interface-builder: ^0.3.3
-    ts-interface-checker: ^1.0.2
-    turbo: ^1.10.7
-    typedoc: ^0.24.1
-    typescript: 5.0.4
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  languageName: unknown
-  linkType: soft
-
 "react-native-awesome-slider@npm:^2.9.0":
   version: 2.9.0
   resolution: "react-native-awesome-slider@npm:2.9.0"
@@ -14790,9 +14751,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-color-picker@patch:react-native-color-picker@npm%3A0.6.0#./.yarn/patches/react-native-color-picker-npm-0.6.0-aaefc9686a.patch::locator=react-native-agora%40workspace%3A.":
+"react-native-color-picker@patch:react-native-color-picker@npm%3A0.6.0#./.yarn/patches/react-native-color-picker-npm-0.6.0-aaefc9686a.patch::locator=react-native-shengwang%40workspace%3A.":
   version: 0.6.0
-  resolution: "react-native-color-picker@patch:react-native-color-picker@npm%3A0.6.0#./.yarn/patches/react-native-color-picker-npm-0.6.0-aaefc9686a.patch::version=0.6.0&hash=a9422a&locator=react-native-agora%40workspace%3A."
+  resolution: "react-native-color-picker@patch:react-native-color-picker@npm%3A0.6.0#./.yarn/patches/react-native-color-picker-npm-0.6.0-aaefc9686a.patch::version=0.6.0&hash=a9422a&locator=react-native-shengwang%40workspace%3A."
   dependencies:
     prop-types: ^15.5.10
     tinycolor2: ^1.4.1
@@ -14955,6 +14916,45 @@ react-native-image-tool@AgoraIO-Extensions/react-native-image-tools:
   checksum: 22d3c302ef90a1cb20eed8c130b32e53d49288a19eba844f506a5e38342ef2add0d4f7a2ff5501cc05052aef6bf7f180db26a067b01f70f3cc12d3e1497329d6
   languageName: node
   linkType: hard
+
+"react-native-shengwang@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "react-native-shengwang@workspace:."
+  dependencies:
+    "@commitlint/config-conventional": ^17.0.2
+    "@evilmartians/lefthook": ^1.5.0
+    "@react-native/eslint-config": ^0.77.1
+    "@release-it/conventional-changelog": ^5.0.0
+    "@types/jest": ^28.1.2
+    "@types/json-bigint": ^1.0.1
+    "@types/react": 18.3.1
+    buffer: ^6.0.3
+    commitlint: ^17.0.2
+    del-cli: ^5.0.0
+    eslint: ^8.4.1
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-auto-import: ^0.1.1
+    eslint-plugin-import: ^2.27.5
+    eslint-plugin-prettier: ^4.0.0
+    eventemitter3: ^5.0.1
+    jest: ^28.1.1
+    json-bigint: ^1.0.0
+    pod-install: ^0.2.0
+    prettier: 2.8.8
+    react: 18.3.1
+    react-native: 0.77.1
+    react-native-builder-bob: ^0.20.0
+    release-it: ^15.0.0
+    ts-interface-builder: ^0.3.3
+    ts-interface-checker: ^1.0.2
+    turbo: ^1.10.7
+    typedoc: ^0.24.1
+    typescript: 5.0.4
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
 
 "react-native-size-matters@npm:^0.4.0":
   version: 0.4.2
@@ -17042,9 +17042,9 @@ react-native-image-tool@AgoraIO-Extensions/react-native-image-tools:
   languageName: node
   linkType: hard
 
-"ts-interface-builder@patch:ts-interface-builder@npm%3A0.3.3#./.yarn/patches/ts-interface-builder-npm-0.3.3-64253a8816.patch::locator=react-native-agora%40workspace%3A.":
+"ts-interface-builder@patch:ts-interface-builder@npm%3A0.3.3#./.yarn/patches/ts-interface-builder-npm-0.3.3-64253a8816.patch::locator=react-native-shengwang%40workspace%3A.":
   version: 0.3.3
-  resolution: "ts-interface-builder@patch:ts-interface-builder@npm%3A0.3.3#./.yarn/patches/ts-interface-builder-npm-0.3.3-64253a8816.patch::version=0.3.3&hash=8181c5&locator=react-native-agora%40workspace%3A."
+  resolution: "ts-interface-builder@patch:ts-interface-builder@npm%3A0.3.3#./.yarn/patches/ts-interface-builder-npm-0.3.3-64253a8816.patch::version=0.3.3&hash=8181c5&locator=react-native-shengwang%40workspace%3A."
   dependencies:
     commander: ^2.12.2
     fs-extra: ^4.0.3

@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Platform } from 'react-native';
+import RNFS from 'react-native-fs';
 import {
   ChannelProfileType,
   ClientRoleType,
@@ -13,7 +14,6 @@ import {
   RecorderState,
   createAgoraRtcEngine,
 } from 'react-native-shengwang';
-import RNFS from 'react-native-fs';
 
 import {
   BaseComponent,
