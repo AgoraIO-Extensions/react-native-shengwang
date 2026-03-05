@@ -2,17 +2,17 @@ import './extension/IAudioDeviceManagerExtension';
 import { AudioDeviceInfo } from './IAgoraRtcEngine';
 
 /**
- * Maximum length of device ID.
+ * 设备 ID 的最大长度。
  */
 export enum MaxDeviceIdLengthType {
   /**
-   * The maximum length of the device ID is 512 characters.
+   * 设备 ID 的最大长度为 512 个字符。
    */
   MaxDeviceIdLength = 512,
 }
 
 /**
- * Audio device management methods.
+ * 音频设备管理方法。
  */
 export abstract class IAudioDeviceManager {
   /**
@@ -106,30 +106,30 @@ export abstract class IAudioDeviceManager {
   abstract getRecordingDeviceMute(): boolean;
 
   /**
-   * Starts the audio playback device test.
+   * 启动音频播放设备测试。
    *
-   * This method tests whether the local audio playback device is working properly. After the test starts, the SDK plays the specified audio file. If the tester hears the sound, it indicates the playback device is functioning correctly.
-   * After calling this method, the SDK triggers the onAudioVolumeIndication callback every 100 ms, reporting uid = 1 and the volume information of the playback device.
-   * The difference between this method and startEchoTest is that this method checks whether the local audio playback device works properly, while the latter checks whether the audio/video devices and network are functioning properly. You must call this method before joining a channel. After the test is complete, if you need to join a channel, make sure to call stopPlaybackDeviceTest to stop the device test.
+   * 该方法用于测试本地音频播放设备是否能正常工作。启动测试后，SDK 播放指定的音频文件，测试者如果能听到声音，说明播放设备能正常工作。
+   * 调用该方法后，SDK 会每隔 100 毫秒触发一次 onAudioVolumeIndication 回调，报告 uid = 1 及播放设备的音量信息。
+   * 该方法和 startEchoTest 的区别在于该方法检测本地的音频播放设备能否正常工作，后者可以检测音视频设备及网络是否正常。 该方法需要在加入频道前调用。测试完成后，如需加入频道，请确保先调用 stopPlaybackDeviceTest 停止设备测试。
    *
-   * @param testAudioFilePath The absolute path of the audio file. The path string must be in UTF-8 encoding.
-   *  Supported file formats: wav, mp3, m4a, aac.
-   *  Supported sampling rates: 8000, 16000, 32000, 44100, 48000.
+   * @param testAudioFilePath 音频文件的绝对路径，路径字符串使用 UTF-8 编码格式。
+   *  支持文件格式: wav、mp3、m4a、aac。
+   *  支持文件采样率: 8000、16000、32000、44100、48000。
    *
    * @returns
-   * 0: Success.
-   *  < 0: Failure. See [Error Codes](https://docs.agora.io/en/video-calling/troubleshooting/error-codes) for details and resolution suggestions.
+   * 0: 方法调用成功。
+   *  < 0: 方法调用失败。详见[错误码](https://doc.shengwang.cn/api-ref/rtc/rn/error-code)了解详情和解决建议。
    */
   abstract startPlaybackDeviceTest(testAudioFilePath: string): number;
 
   /**
-   * Stops the audio playback device test.
+   * 停止音频播放设备测试。
    *
-   * This method stops the audio playback device test. After calling startPlaybackDeviceTest, you must call this method to stop the test. You must call this method before joining a channel.
+   * 该方法用于停止音频播放设备测试。调用 startPlaybackDeviceTest 后，必须调用该方法停止测试。 该方法需要在加入频道前调用。
    *
    * @returns
-   * 0: Success.
-   *  < 0: Failure. See [Error Codes](https://docs.agora.io/en/video-calling/troubleshooting/error-codes) for details and resolution suggestions.
+   * 0: 方法调用成功。
+   *  < 0: 方法调用失败。详见[错误码](https://doc.shengwang.cn/api-ref/rtc/rn/error-code)了解详情和解决建议。
    */
   abstract stopPlaybackDeviceTest(): number;
 
