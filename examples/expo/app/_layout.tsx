@@ -3,7 +3,7 @@ import { Stack } from 'expo-router';
 import React, { useState } from 'react';
 
 import { Keyboard, StyleSheet } from 'react-native';
-import { AgoraPipState } from 'react-native-agora';
+import { AgoraPipState } from 'react-native-shengwang';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 

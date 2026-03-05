@@ -3,7 +3,7 @@ import {
   RtcSurfaceView,
   VideoCanvas,
   VideoSourceType,
-} from 'react-native-agora';
+} from 'react-native-shengwang';
 
 import { AgoraCard, AgoraList, AgoraStyle } from '../../components/ui';
 

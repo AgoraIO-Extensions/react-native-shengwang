@@ -1,5 +1,5 @@
 {
-  "name": "react-native-agora",
+  "name": "react-native-shengwang",
   "version": "4.6.2",
   "description": "Agora RTC SDK For React Native",
   "main": "lib/commonjs/index",
@@ -47,7 +47,7 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/AgoraIO-Extensions/react-native-agora",
+  "repository": "https://github.com/AgoraIO-Extensions/react-native-shengwang",
   "author": "HUI <luxuhui@agora.io> (https://github.com/LichKing-2234)",
   "license": "MIT",
   "bugs": {
