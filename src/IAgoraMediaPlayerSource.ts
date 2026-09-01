@@ -33,7 +33,7 @@ export interface IMediaPlayerSourceObserver {
    * 播放媒体文件时，SDK 每隔 1 秒会自动触发该回调，报告当前播放进度。
    *
    * @param positionMs 当前播放进度，单位为 ms。
-   * @param timestampMs 当前播放进度的 NTP 时间戳，单位为 ms。
+   * @param timestampMs 当前播放进度的 NTP 时间戳，单位为 ms。 该参数仅在频道内生效。
    */
   onPositionChanged?(positionMs: number, timestampMs: number): void;
 

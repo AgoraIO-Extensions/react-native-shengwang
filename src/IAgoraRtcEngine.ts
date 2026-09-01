@@ -1304,11 +1304,11 @@ export class ChannelMediaOptions {
    */
   enableMultipath?: boolean;
   /**
-   * 上行传输模式。详见 MultipathMode 。 使用该参数时，请确保已将 enableMultipath 设置为 true 。
+   * @ignore
    */
   uplinkMultipathMode?: MultipathMode;
   /**
-   * 下行传输模式。详见 MultipathMode 。 使用该参数时，请确保已将 enableMultipath 设置为 true 。
+   * @ignore
    */
   downlinkMultipathMode?: MultipathMode;
   /**
@@ -1972,7 +1972,7 @@ export interface IRtcEngineEventHandler {
   /**
    * 虚拟节拍器状态发生改变回调。
    *
-   * 废弃 自 v4.6.0 版本废弃。 虚拟节拍器状态发生改变时，SDK 会触发该回调报告当前的虚拟节拍器状态。在虚拟节拍器出现故障时，该回调可以帮助你了解当前虚拟节拍的状态以及出现故障的原因，方便你排查问题。
+   * 废弃 自 v4.6.2 版本废弃。 虚拟节拍器状态发生改变时，SDK 会触发该回调报告当前的虚拟节拍器状态。在虚拟节拍器出现故障时，该回调可以帮助你了解当前虚拟节拍的状态以及出现故障的原因，方便你排查问题。
    *
    * @param state 当前的虚拟节拍器状态，详见 RhythmPlayerStateType 。
    * @param reason 虚拟节拍器发生错误的错误码和错误信息，详见 RhythmPlayerReason 。
@@ -2085,10 +2085,10 @@ export interface IRtcEngineEventHandler {
    * Token 已过期回调。
    *
    * 在音视频互动过程中，如果 Token 失效，SDK 会触发该回调报告 Token 已过期。
-   * 当收到该回调时，你需要重新在服务端生成新的 Token，然后通过下列任意一种方式来更新 Token：
+   * 收到该回调时，你需要在 Token 服务器上生成新的 Token，并根据场景更新 Token：
    *  单频道场景：
-   *  调用 renewToken 来传入新的 Token。
-   *  调用 leaveChannel 离开当前频道，然后在调用 joinChannel 时传入新的 Token 重新加入频道。
+   *  调用 renewToken 传入新的 Token，无需先离开频道。SDK 会通过 onRenewTokenResult 回调报告更新结果。
+   *  如果你的 App 需要离开并重新加入频道，也可以调用 leaveChannel 离开频道，然后在调用 joinChannel 时传入新的 Token。
    *  多频道场景：调用 updateChannelMediaOptionsEx 传入新的 Token。
    *
    * @param connection Connection 信息。详见 RtcConnection 。
@@ -2098,10 +2098,10 @@ export interface IRtcEngineEventHandler {
   /**
    * Token 即将在 30s 内过期回调。
    *
-   * 当收到该回调时，你需要重新在服务端生成新的 Token，然后通过下列任意一种方式来更新 Token：
+   * 收到该回调时，你需要在 Token 服务器上生成新的 Token，并根据场景更新 Token：
    *  单频道场景：
-   *  调用 renewToken 来传入新的 Token。
-   *  调用 leaveChannel 离开当前频道，然后在调用 joinChannel 时传入新的 Token 重新加入频道。
+   *  调用 renewToken 传入新的 Token，无需先离开频道。SDK 会通过 onRenewTokenResult 回调报告更新结果。
+   *  如果你的 App 需要离开并重新加入频道，也可以调用 leaveChannel 离开频道，然后在调用 joinChannel 时传入新的 Token。
    *  多频道场景：调用 updateChannelMediaOptionsEx 传入新的 Token。
    *
    * @param connection Connection 信息。详见 RtcConnection 。
@@ -3054,105 +3054,93 @@ export interface IMetadataObserver {
 }
 
 /**
- * CDN 推流状态改变的原因。
- *
- * 废弃 自 v4.6.0 版本废弃。
+ * @ignore
  */
 export enum DirectCdnStreamingReason {
   /**
-   * 0：推流状态正常。
+   * @ignore
    */
   DirectCdnStreamingReasonOk = 0,
   /**
-   * 1：一般性错误，没有明确原因。你可以尝试重新推流。
+   * @ignore
    */
   DirectCdnStreamingReasonFailed = 1,
   /**
-   * 2：音频推流出错。例如，本地音频采集设备未正常工作、被其他进程占用或没有使用权限。
+   * @ignore
    */
   DirectCdnStreamingReasonAudioPublication = 2,
   /**
-   * 3：视频推流出错。例如，本地视频采集设备未正常工作、被其他进程占用或没有使用权限。
+   * @ignore
    */
   DirectCdnStreamingReasonVideoPublication = 3,
   /**
-   * 4：连接 CDN 失败。
+   * @ignore
    */
   DirectCdnStreamingReasonNetConnect = 4,
   /**
-   * 5：URL 已用于推流。请使用新的 URL。
+   * @ignore
    */
   DirectCdnStreamingReasonBadName = 5,
 }
 
 /**
- * 当前 CDN 推流状态。
- *
- * 废弃 自 v4.6.0 版本废弃。
+ * @ignore
  */
 export enum DirectCdnStreamingState {
   /**
-   * 0：初始状态，即推流尚未开始。
+   * @ignore
    */
   DirectCdnStreamingStateIdle = 0,
   /**
-   * 1：正在推流中。当你调用 startDirectCdnStreaming 成功推流时，SDK 会返回该值。
+   * @ignore
    */
   DirectCdnStreamingStateRunning = 1,
   /**
-   * 2：推流已正常结束。当你调用 stopDirectCdnStreaming 主动停止推流时，SDK 会返回该值。
+   * @ignore
    */
   DirectCdnStreamingStateStopped = 2,
   /**
-   * 3：推流失败。你可以通过 onDirectCdnStreamingStateChanged 回调报告的信息排查问题，然后重新推流。
+   * @ignore
    */
   DirectCdnStreamingStateFailed = 3,
   /**
-   * 4：尝试重新连接声网服务器和 CDN。最多尝试重连 10 次，如仍未成功恢复连接，则推流状态变为 DirectCdnStreamingStateFailed。
+   * @ignore
    */
   DirectCdnStreamingStateRecovering = 4,
 }
 
 /**
- * 当前 CDN 推流的统计数据。
- *
- * 废弃 自 v4.6.0 版本废弃。
+ * @ignore
  */
 export class DirectCdnStreamingStats {
   /**
-   * 视频的宽度（px）。
+   * @ignore
    */
   videoWidth?: number;
   /**
-   * 视频的高度（px）。
+   * @ignore
    */
   videoHeight?: number;
   /**
-   * 当前视频帧率（fps）。
+   * @ignore
    */
   fps?: number;
   /**
-   * 当前视频码率（bps）。
+   * @ignore
    */
   videoBitrate?: number;
   /**
-   * 当前音频码率（bps）。
+   * @ignore
    */
   audioBitrate?: number;
 }
 
 /**
- * IDirectCdnStreamingEventHandler 接口类用于 SDK 向 App 发送 CDN 推流的事件通知，App 通过继承该接口类的方法获取 SDK 的事件通知。
+ * @ignore
  */
 export interface IDirectCdnStreamingEventHandler {
   /**
-   * CDN 推流状态改变回调。
-   *
-   * 主播端直接向 CDN 推流后，当推流状态改变时，SDK 会触发该回调向你报告新的状态、错误码和信息。你可以据此排查问题。
-   *
-   * @param state 当前推流状态。详见 DirectCdnStreamingState 。
-   * @param reason 推流状态改变的原因。详见 DirectCdnStreamingReason 。
-   * @param message 状态改变对应的信息。
+   * @ignore
    */
   onDirectCdnStreamingStateChanged?(
     state: DirectCdnStreamingState,
@@ -3161,35 +3149,29 @@ export interface IDirectCdnStreamingEventHandler {
   ): void;
 
   /**
-   * CDN 推流统计数据回调。
-   *
-   * 在主播直接向 CDN 推流的过程中，SDK 每隔 1 秒触发一次该回调。
-   *
-   * @param stats 当前推流的统计数据。详见 DirectCdnStreamingStats 。
+   * @ignore
    */
   onDirectCdnStreamingStats?(stats: DirectCdnStreamingStats): void;
 }
 
 /**
- * 主播端的媒体选项。
- *
- * 废弃 自 v4.6.0 版本废弃。
+ * @ignore
  */
 export class DirectCdnStreamingMediaOptions {
   /**
-   * 设置是否发布摄像头采集的视频。 true : 发布摄像头采集的视频。 false :（默认）不发布摄像头采集的视频。
+   * @ignore
    */
   publishCameraTrack?: boolean;
   /**
-   * 设置是否发布麦克风采集的音频。 true : 发布麦克风采集的音频。 false :（默认）不发布麦克风采集的音频。
+   * @ignore
    */
   publishMicrophoneTrack?: boolean;
   /**
-   * 设置是否发布自定义采集的音频。 true : 发布自定义采集的音频。 false :（默认）不发布自定义采集的音频。
+   * @ignore
    */
   publishCustomAudioTrack?: boolean;
   /**
-   * 设置是否发布自定义采集的视频。 true : 发布自定义采集的视频。 false :（默认）不发布自定义采集的视频。
+   * @ignore
    */
   publishCustomVideoTrack?: boolean;
   /**
@@ -3201,7 +3183,7 @@ export class DirectCdnStreamingMediaOptions {
    */
   publishMediaPlayerId?: number;
   /**
-   * 调用 createCustomVideoTrack 方法返回的视频轨道 ID。默认值为 0。
+   * @ignore
    */
   customVideoTrackId?: number;
 }
@@ -7160,51 +7142,21 @@ export abstract class IRtcEngine {
   abstract resumeAllChannelMediaRelay(): number;
 
   /**
-   * 设置主播端直接向 CDN 推流时的音频编码属性。
-   *
-   * 废弃 自 v4.6.0 版本废弃。 该方法仅对麦克风采集或自采集的音频有效，即对在 DirectCdnStreamingMediaOptions 中设置 publishMicrophoneTrack 或 publishCustomAudioTrack 为 true 时所采集的音频有效。
-   *
-   * @returns
-   * 0: 方法调用成功。
-   *  < 0: 方法调用失败。详见[错误码](https://doc.shengwang.cn/api-ref/rtc/rn/error-code)了解详情和解决建议。
+   * @ignore
    */
   abstract setDirectCdnStreamingAudioConfiguration(
     profile: AudioProfileType
   ): number;
 
   /**
-   * 设置主播端直接向 CDN 推流时的视频编码属性。
-   *
-   * 废弃 自 v4.6.0 版本废弃。 该方法仅对摄像头采集、屏幕共享或自采集的视频有效。即对在 DirectCdnStreamingMediaOptions 中设置 publishCameraTrack 或 publishCustomVideoTrack 为 true 时所采集的视频有效。
-   * 如果你设置的视频分辨率超出你的摄像头设备支持的范围，SDK 会根据你的设置进行自适应，取最接近、且长宽比与你设置的分辨率一致的值进行采集、编码、推流。你可以通过 onDirectCdnStreamingStats 回调了解推送的视频流的实际分辨率。
-   *
-   * @param config 视频编码参数配置。详见 VideoEncoderConfiguration 。 在直接向 CDN 推流时，SDK 目前仅支持将 OrientationMode 设为横屏模式（ OrientationFixedLandscape ）或竖屏模式（ OrientationFixedPortrait ）。
-   *
-   * @returns
-   * 0: 方法调用成功。
-   *  < 0: 方法调用失败。详见[错误码](https://doc.shengwang.cn/api-ref/rtc/rn/error-code)了解详情和解决建议。
+   * @ignore
    */
   abstract setDirectCdnStreamingVideoConfiguration(
     config: VideoEncoderConfiguration
   ): number;
 
   /**
-   * 设置主播端开始直接向 CDN 推流。
-   *
-   * 废弃 自 v4.6.0 版本废弃。 SDK 不支持同一时间向同一个 URL 重复推流。
-   * 媒体选项说明
-   * SDK 不支持 publishCameraTrack 和 publishCustomVideoTrack 同时为 true ，也不支持 publishMicrophoneTrack 和 publishCustomAudioTrack 同时为 true 。你可以根据场景需求设置媒体选项 (DirectCdnStreamingMediaOptions)。示例如下：
-   * 如果你想推送主播端自定义采集的音视频流，请将媒体选项进行如下设置： publishCustomAudioTrack 设为 true 并调用 pushAudioFrame publishCustomVideoTrack 设为 true 并调用 pushVideoFrame
-   *  确保 publishCameraTrack 为 false (默认值)
-   *  确保 publishMicrophoneTrack 为 false (默认值) 自 v4.2.0 起，SDK 支持推送纯音频流。你可以在 DirectCdnStreamingMediaOptions 中将 publishCustomAudioTrack 或者 publishMicrophoneTrack 设为 true ，并调用 pushAudioFrame 即可推送纯音频流。
-   *
-   * @param eventHandler 详见 onDirectCdnStreamingStateChanged 及 onDirectCdnStreamingStats 。
-   * @param publishUrl CDN 推流 URL。
-   * @param options 主播端的媒体选项。详见 DirectCdnStreamingMediaOptions 。
-   *
-   * @returns
-   * 0: 方法调用成功。
-   *  < 0: 方法调用失败。详见[错误码](https://doc.shengwang.cn/api-ref/rtc/rn/error-code)了解详情和解决建议。
+   * @ignore
    */
   abstract startDirectCdnStreaming(
     eventHandler: IDirectCdnStreamingEventHandler,
@@ -7213,13 +7165,7 @@ export abstract class IRtcEngine {
   ): number;
 
   /**
-   * 设置主播端停止直接向 CDN 推流。
-   *
-   * 废弃 自 v4.6.0 版本废弃。
-   *
-   * @returns
-   * 0: 方法调用成功。
-   *  < 0: 方法调用失败。详见[错误码](https://doc.shengwang.cn/api-ref/rtc/rn/error-code)了解详情和解决建议。
+   * @ignore
    */
   abstract stopDirectCdnStreaming(): number;
 
@@ -7233,7 +7179,7 @@ export abstract class IRtcEngine {
   /**
    * 开启虚拟节拍器。
    *
-   * 废弃 自 v4.6.0 版本废弃。
+   * 废弃 自 v4.6.2 版本废弃。
    *  开启虚拟节拍器后，SDK 会从头开始播放指定的音频文件，并根据你在 AgoraRhythmPlayerConfig 中设置的 beatsPerMinute 控制每个文件的播放时长。例如，将 beatsPerMinute 设为 60 ，则 SDK 会 1 秒播放 1 个节拍。如果文件时长超过了节拍时长，则 SDK 只播放节拍时长部分的音频。
    *  虚拟节拍器的声音默认不会发布至远端，如果你希望远端用户听到虚拟节拍器的声音，你可以在调用该方法后，将 ChannelMediaOptions 中的 publishRhythmPlayerTrack 设为 true 。
    *
@@ -7255,7 +7201,7 @@ export abstract class IRtcEngine {
   /**
    * 关闭虚拟节拍器。
    *
-   * 调用 startRhythmPlayer 后，你可以调用该方法关闭虚拟节拍器。
+   * 废弃 自 v4.6.2 版本废弃。 调用 startRhythmPlayer 后，你可以调用该方法关闭虚拟节拍器。
    *
    * @returns
    * 0: 方法调用成功。
@@ -7266,7 +7212,7 @@ export abstract class IRtcEngine {
   /**
    * 配置虚拟节拍器。
    *
-   * 废弃 自 v4.6.0 版本废弃。
+   * 废弃 自 v4.6.2 版本废弃。
    *  调用 startRhythmPlayer 后，你可以调用该方法重新配置虚拟节拍器。
    *  开启虚拟节拍器后，SDK 会从头开始播放指定的音频文件，并根据你在 AgoraRhythmPlayerConfig 中设置的 beatsPerMinute 控制每个文件的播放时长。例如，将 beatsPerMinute 设为 60 ，则 SDK 会 1 秒播放 1 个节拍。如果文件时长超过了节拍时长，则 SDK 只播放节拍时长部分的音频。
    *  虚拟节拍器的声音默认不会发布至远端，如果你希望远端用户听到虚拟节拍器的声音，你可以在调用该方法后，将 ChannelMediaOptions 中的 publishRhythmPlayerTrack 设为 true 。
