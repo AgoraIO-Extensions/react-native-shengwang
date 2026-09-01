@@ -1,5 +1,7 @@
 
 
+## [4.6.4](https://github.com/AgoraIO-Extensions/react-native-shengwang/compare/v4.6.4-build.1-rc.1...v4.6.4) (2026-09-01)
+
 ## [4.6.4-build.1-rc.1](https://github.com/AgoraIO-Extensions/react-native-shengwang/compare/v4.6.2...v4.6.4-build.1-rc.1) (2026-09-01)
 
 
