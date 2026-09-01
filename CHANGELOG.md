@@ -1,5 +1,12 @@
 
 
+## [4.6.4-build.1-rc.1](https://github.com/AgoraIO-Extensions/react-native-shengwang/compare/v4.6.2...v4.6.4-build.1-rc.1) (2026-09-01)
+
+
+### Bug Fixes
+
+* **ci:** pin Ruby 2.7 compatible gems ([#76](https://github.com/AgoraIO-Extensions/react-native-shengwang/issues/76)) ([e4608e6](https://github.com/AgoraIO-Extensions/react-native-shengwang/commit/e4608e698bb889ab5e4bc493c6584c598090b15c))
+
 ## 4.6.2 (2026-03-05)
 
 
