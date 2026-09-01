@@ -1891,7 +1891,7 @@ export enum MultipathMode {
    */
   Duplicate = 0,
   /**
-   * （1）：动态发送模式，SDK 会根据当前网络状况动态选择最优路径进行数据传输，以提升传输性能。
+   * @ignore
    */
   Dynamic = 1,
 }
@@ -2592,6 +2592,14 @@ export enum LocalVideoEventType {
    * （4）：屏幕采集过程中发生系统内部错误，仅适用于 Android 平台。
    */
   LocalVideoEventTypeScreenCaptureSystemInternalError = 4,
+  /**
+   * @ignore
+   */
+  LocalVideoEventTypeCameraFocalLengthApplied = 5,
+  /**
+   * @ignore
+   */
+  LocalVideoEventTypeCameraFocalLengthFallbackToDefault = 6,
 }
 
 /**
@@ -5362,7 +5370,7 @@ export enum UploadErrorReason {
 /**
  * 调用 renewToken 后的错误码。
  *
- * 自从 自 4.6.0 版本新增。
+ * 自从 自 v4.6.0 版本新增。
  */
 export enum RenewTokenErrorCode {
   /**
